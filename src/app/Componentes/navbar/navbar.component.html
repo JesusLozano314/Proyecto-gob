@@ -1,0 +1,22 @@
+
+<body>
+    <header>
+        
+        <div class="header-container">
+            <a  [routerLink]="['menu']" role="button"
+            ><img src="assets/img/x.jpg"></a>
+            <form class="search-container">
+                <input type="text" id="search-input" placeholder="Buscar tenis..." (keyup.enter)="buscarTenis(buscarTexto.value)" #buscarTexto>
+                <button id="search-button" type="submit" (click)="buscarTenis(buscarTexto.value)">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+            <nav>
+                <ul class="nav-list">
+                    <li><a [routerLink]="['contacto']" target="_blank">Contáctanos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+</body>
+

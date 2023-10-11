@@ -1,0 +1,119 @@
+/* Colores */
+:root {
+    --primary-bg-color: #333;
+    --primary-text-color: #fff;
+    --secondary-bg-color: #f5f5f5;
+    --secondary-text-color: #333;
+    --accent-color: #000;
+    --accent-hover-color: #333;
+    --button-hover-color: #ccc;
+    --banner-bg-color: #555;
+}
+
+img{
+    width: 40%;
+    height: 40%;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding-left: 5%;
+    background-color: var(--primary-bg-color);
+    color: var(--primary-text-color);
+}
+
+/* Estilos del encabezado con banner */
+.header-container {
+    background-color: var(--primary-bg-color);
+    color: var(--primary-text-color);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px; /* Tamaño de fuente aumentado */
+}
+
+/* Estilos del navbar con cambio de color al pasar el mouse */
+nav {
+    background-color: var(--primary-bg-color);
+    color: var(--primary-text-color);
+    text-align: center;
+}
+
+nav ul.nav-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul.nav-list li {
+    margin: 0 20px;
+    position: relative;
+}
+
+nav ul.nav-list li a {
+    text-decoration: none;
+    color: var(--primary-text-color);
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+    display: inline-block;
+}
+
+nav ul.nav-list li a:hover {
+    color: var rgba(171, 166, 166, 0.54);
+    background-color: rgba(171, 166, 166, 0.54);
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: color 0.3s ease, background-color 0.3s ease, padding 0.3s ease;
+}
+
+/* Estilos del buscador */
+.search-container {
+    display: flex;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 25px;
+    background-color: var(--secondary-bg-color);
+    transition: all 0.3s ease;
+}
+
+#search-input {
+    border: none;
+    flex-grow: 2;
+    padding: 20px;
+    font-size: 24px;
+    background-color: transparent;
+    color: var(--secondary-text-color);
+    outline: none;
+    width: 100%;
+}
+
+#search-input::placeholder {
+    color: #999;
+    font-size: 20px;
+}
+
+#search-button {
+    background-color: var(--accent-color);
+    color: var(--primary-text-color);
+    border: none;
+    border-radius: 25px;
+    padding: 20px 30px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#search-button:hover {
+    background-color: var(--button-hover-color);
+}
+

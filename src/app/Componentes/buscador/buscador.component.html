@@ -1,0 +1,63 @@
+
+<body>
+    <main>
+   
+        <section class="search-results">
+            
+            
+            <div class="filters">
+        
+                <h3>Categorías</h3>
+            
+                   <a href="./buscar/Nike"> <button type="submit" class="add-to-cart1"  > Nike</button></a>
+                   <a href="./buscar/Adidas"> <button type="submit" class="add-to-cart1"  > Adidas</button></a>
+                   <a href="./buscar/Converse"> <button type="submit" class="add-to-cart1"   > Converse</button></a>
+                   <a href="./buscar/Puma"> <button type="submit" class="add-to-cart1"   > Puma</button></a>
+                    <br>
+                    <h3>Los mas buscados</h3>
+                    <a href="./buscar/Yeezy"> <button type="submit" class="add-to-cart1"  > Yeezy</button></a>
+                    <a href="./buscar/Jordan"> <button type="submit" class="add-to-cart1"  > Jordan</button></a>
+                    <a href="./buscar/Chuck"> <button type="submit" class="add-to-cart1"   > Chuck</button></a>
+                    <a href="./buscar/RS-X"> <button type="submit" class="add-to-cart1"   > RS-X</button></a>
+                    <br>
+                    
+                
+                   
+                    
+                <h3></h3>
+               
+            </div>
+            <h1><small>Resultado de Búsqueda: "{{termino}}" </small></h1>
+
+            <div class="row animated fadeIn" *ngIf="tenis.length==0 let teni of tenis| paginate: { itemsPerPage: 6, currentPage: page }">
+                <div class="col-md-12">
+                    <div class="alert alert-info" role="alert">No se encontro "{{termino}}" en el buscador</div>
+                </div>
+            </div>
+          
+            <div class="product-container">
+           
+                <div class="product" *ngFor="let teni of tenis | paginate: { itemsPerPage: 6, currentPage: page };
+                let i =index">
+                    <img src="{{teni.img}}" alt="Producto 1">
+                    <h3>{{teni.nombre |uppercase}}</h3>
+                    <p>{{teni.desc |slice:0:60}}...</p>
+                    <p><span class="price">{{teni.precio}}</span></p>
+                    <button class="add-to-cart">Ver más</button>
+                    <div class="card-footer">
+                    <small class="text-body-secondary">{{teni.marca}}</small></div>
+                </div>
+                
+           
+                
+            </div>
+            
+            <div class="pagination">
+                <ul>
+                    <pagination-controls (pageChange)="page = $event"  previousLabel="Previous" nextLabel="Next"></pagination-controls>
+                </ul>
+            </div>
+        </section>
+    </main>
+    
+</body>

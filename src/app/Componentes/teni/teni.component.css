@@ -1,0 +1,94 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #000;
+    
+}
+
+/* Estilos del encabezado */
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.back-link {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.back-link img {
+    margin-right: 5px;
+}
+
+.back-link:hover {
+    color: #999;
+}
+
+header h1 {
+    font-size: 28px;
+    margin: 0;
+}
+
+/* Estilos para el contenido de detalles del tenis */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tenis-details img {
+    max-width: 50%;
+    height: auto;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.tenis-details h2 {
+    font-size: 24px;
+    margin-top: 10px;
+    color: #333;
+}
+
+.description {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.tenis-details h3 {
+    font-size: 20px;
+    margin-top: 20px;
+    color: #333;
+}
+
+
+
+
+.whatsapp-link {
+    display: inline-block;
+    background-color: #25D366;
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp-link:hover {
+    background-color: #128C7E;
+}
