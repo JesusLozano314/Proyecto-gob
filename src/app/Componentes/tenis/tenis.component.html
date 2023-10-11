@@ -11,22 +11,22 @@
             <!-- Resultados de la búsqueda (productos) -->
             <div class="product-container" >
                 <!-- Producto 1 -->
-                <div class="product" *ngFor="let teni of tenis| paginate: { itemsPerPage: 6, currentPage: page } ;
+                <div class="product" *ngFor="let teni of tenis | paginate: { itemsPerPage: 3, currentPage: page } ;
                 let i =index "  >
                     <img src="{{teni.img}}" alt="Producto 1">
                     <h3>{{teni.nombre |uppercase}}</h3>
-                    <p>{{teni.desc |slice:0:60}}...</p>
+                    <p>{{teni.desc}}</p>
                     <p><span class="price">{{teni.precio}}</span></p>
-                    <button class="add-to-cart"(click)="VerTeni(i)">Ver más</button>
+                    <a href="https://wa.me/1234567890?text=Hola, me gustaría comprar el Tenis {{teni.nombre}}. Por favor, avísame cómo proceder." target="_blank" class="whatsapp-link"><button class="add-to-cart">Contactanos!!</button></a>
                     <div class="card-footer">
                     <small class="text-body-secondary">{{teni.marca}}</small></div>
                 </div>
                 
-                <!-- Repite esta estructura para más productos -->
+
                 
             </div>
             
-            <!-- Paginación -->
+  
             <div class="pagination">
                 <ul>
                     <pagination-controls (pageChange)="page = $event"  previousLabel="Previous" nextLabel="Next"></pagination-controls>
